@@ -10,8 +10,10 @@ main(@ARGV);
 sub main
 {
     my @array = (1, "two", 3, 4, 5);
+    my @array2 = qw("wee tard haha"); #each word is it's own index
     my ( $one, $two, $three, $four) = (1, 2, 3, 4); #assigning multiple variable
     message(join(":", @array));
+    message(join(":", @array2));
     message($one);
     message($two);
     message($three);
