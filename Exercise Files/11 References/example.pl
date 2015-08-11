@@ -12,10 +12,16 @@ sub main
     my $var = "This is the Perl 5 references chapter.";
     my $ref = \$var; #$ref reference to $var
     my $copy = $ref;
+    	my $x = 10;
+	my $refs = \$x;
     
     message($$ref);
     $var = 42;
     message($$copy);
+    
+    decrement($refs);
+	decrement($refs);
+	decrement($refs);
 }
 
 sub message
@@ -31,3 +37,7 @@ sub error
     exit 0;
 }
 
+sub decrement{
+	my $n = shift; #remember what it was before
+	say --$$n;
+}
